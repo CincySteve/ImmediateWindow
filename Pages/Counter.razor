@@ -1,5 +1,6 @@
 ﻿@page "/counter"
 @inject MyData MyData
+@using System.Data;
 
 <PageTitle>Counter</PageTitle>
 
@@ -16,5 +17,9 @@
         {
         currentCount++;
         MyData.MyInt = currentCount;
+
+        MyData.MyDataTable = new System.Data.DataTable();
+        DataColumn dc = new DataColumn("Col1", typeof(decimal));
+        MyData.MyDataTable.Columns.Add(dc);
         }
 }
