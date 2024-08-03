@@ -18,6 +18,10 @@
         currentCount++;
         MyData.MyInt = currentCount;
 
+        DataTable LocalDT = new DataTable();
+        DataColumn localdc = new DataColumn("Col1", typeof(decimal));
+        LocalDT.Columns.Add(localdc);
+
         MyData.MyDataTable = new System.Data.DataTable();
         DataColumn dc = new DataColumn("Col1", typeof(decimal));
         MyData.MyDataTable.Columns.Add(dc);
